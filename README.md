@@ -62,20 +62,17 @@ We have included Matlab code to parse our data files.
 
 To extract Coreference information use the following function call:
 
-    ```Shell
     >> corefData = getSentenceData('<path_to_annotation_directory>/Sentences/<image id>.txt');
-    ```
 
 To extract the xml data use the following:
 
-    ```Shell
     >> annotationData = getAnnotations('<path_to_annotation_directory>/Annotations/<image id>.xml');
-    ```
+    
 Please see each function for details about the structures returned from each function.
 
 ### Python Interface
 
-The python interface to parse out data files follow the same format as the Matlab interface, except underscores were used rather than camel case.  Please see `flickr30k_entities_utils.py` for further information about the provided functions.
+The python interface to parse out data files follow the same format as the Matlab interface, except underscores were used rather than camel case.  Please see [the code's documentation](flickr30k_entities_utils.py) for further information about the provided functions.
 
 ### Acknowledgements:
 
