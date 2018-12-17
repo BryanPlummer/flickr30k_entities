@@ -39,7 +39,7 @@ Each image in the dataset has a txt file in the "Sentences" folder.  Each line o
 
     [/EN#<chain id>/<type 1>/<type 2>.../<type n> <word 1> <word 2> ... <word n>]
 
-Phrases that belong to the same coreference chain share the same chain id.  Each phrase has one or more types associated with it, which correspond to the rough categories described in [1].  Phrases of the type "notvisual" have the null chain id of "0" and should be considered a set of singleton coreference chains since these phrases were not annotated.
+Phrases that belong to the same coreference chain share the same chain id.  Each phrase has one or more types associated with it, which correspond to the rough categories described in our paper.  Phrases of the type "notvisual" have the null chain id of "0" and should be considered a set of singleton coreference chains since these phrases were not annotated.
 
 
 #### Bounding Boxes or Scene/No Box:
