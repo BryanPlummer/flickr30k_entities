@@ -29,7 +29,9 @@ Note that the Flickr30k Dataset includes images obtained from [Flickr](https://w
 
 ### Version 1.0 
 
-This dataset contains 244k coreference chains and 276k manually annotated bounding boxes for each of the 31,783 images and 158,915 English captions (five per image) in the original dataset.
+This dataset contains 244k coreference chains and 276k manually annotated bounding boxes for each of the 31,783 images and 158,915 English captions (five per image) in the original dataset. 
+
+To obtain the images for this dataset, please visit the [Flickr30K webpage](http://hockenmaier.cs.illinois.edu/DenotationGraph/) and fill out the form linked to at tbe bottom of the page.
 
 #### Coreference Chains:
 
