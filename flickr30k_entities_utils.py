@@ -94,11 +94,10 @@ def get_annotations(fn):
 
     for object_container in root.findall('object'):
         box_id = object_container.findall('name')[0].text
-        if box_id not in anno_info['boxes']:
-            anno_info['boxes'][box_id] = []
-
         box_container = object_container.findall('bndbox')
         if len(box_container) > 0:
+            if box_id not in anno_info['boxes']:
+                anno_info['boxes'][box_id] = []
             xmin = int(box_container[0].findall('xmin')[0].text)
             ymin = int(box_container[0].findall('ymin')[0].text)
             xmax = int(box_container[0].findall('xmax')[0].text)

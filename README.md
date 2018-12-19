@@ -1,10 +1,10 @@
 
-# Flickr30k Entities Dataset
+# Flickr30K Entities Dataset
 
-If you use our dataset please cite our [paper](https://arxiv.org/pdf/1505.04870.pdf).
+If you use our dataset, please cite our [paper](https://arxiv.org/pdf/1505.04870.pdf):
 
     @article{flickrentitiesijcv,
-        title={Flickr30k Entities: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models},
+        title={Flickr30K Entities: Collecting Region-to-Phrase Correspondences for Richer Image-to-Sentence Models},
         author={Bryan A. Plummer and Liwei Wang and Christopher M. Cervantes and Juan C. Caicedo and Julia Hockenmaier and Svetlana Lazebnik},
         journal={IJCV},
         volume={123},
@@ -13,7 +13,7 @@ If you use our dataset please cite our [paper](https://arxiv.org/pdf/1505.04870.
         year={2017}
     }
 
-In addition to citing our dataset, please also reference the original Flickr30K dataset:
+In addition to citing our paper, please also reference the original Flickr30K dataset:
 
     @article{flickr30k,
         title={From image descriptions to visual denotations: New similarity metrics for semantic inference over event descriptions},
@@ -24,16 +24,16 @@ In addition to citing our dataset, please also reference the original Flickr30K 
         year={2014}
     }
 
-Note that the Flickr30k Dataset includes images obtained from [Flickr](https://www.flickr.com/). Use of the images must abide by the [Flickr Terms of Use](http://www.flickr.com/help/terms/). We do not own the copyright of the images. They are solely provided for researchers and educators who wish to use the dataset for non-commercial research and/or educational purposes.
+Note that the Flickr30K Dataset includes images obtained from [Flickr](https://www.flickr.com/). Use of the images must abide by the [Flickr Terms of Use](http://www.flickr.com/help/terms/). We do not own the copyright of the images. They are solely provided for researchers and educators who wish to use the dataset for non-commercial research and/or educational purposes.
 
 
-### Version 1.0 
+## Version 1.0 
 
 This dataset contains 244k coreference chains and 276k manually annotated bounding boxes for each of the 31,783 images and 158,915 English captions (five per image) in the original dataset. 
 
 To obtain the images for this dataset, please visit the [Flickr30K webpage](http://hockenmaier.cs.illinois.edu/DenotationGraph/) and fill out the form linked to at tbe bottom of the page.
 
-#### Coreference Chains:
+### Coreference Chains:
 
 Each image in the dataset has a txt file in the "Sentences" folder.  Each line of this file contains a caption with annotated phrases blocked off with brackets.  Each annotation has the following form:
 
@@ -56,7 +56,7 @@ We have a list of the captions in the dataset that do not relate to the images t
 
 Flickr30K has been evaluated under multiple splits so have provided the image splits used in our experiments in the train.txt, test.txt, and val.txt files.
 
-### Matlab Interface
+## Matlab Interface
 
 We have included Matlab code to parse our data files.  
 
@@ -70,11 +70,11 @@ To extract the xml data use the following:
     
 Please see each function for details about the structures returned from each function.
 
-### Python Interface
+## Python Interface
 
 The python interface to parse out data files follow the same format as the Matlab interface, except underscores were used rather than camel case.  Please see [the code's documentation](flickr30k_entities_utils.py) for further information about the provided functions.
 
-### Acknowledgements:
+## Acknowledgements:
 
 This material is based upon work supported by the National Science Foundation under Grants No. 1053856, 1205627, 1405883, IIS-1228082, and CIF-1302438 as well as support from  Xerox UAC and the Sloan Foundation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or any sponsor.
 
