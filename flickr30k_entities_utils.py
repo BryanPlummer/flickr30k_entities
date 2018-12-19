@@ -98,10 +98,10 @@ def get_annotations(fn):
         if len(box_container) > 0:
             if box_id not in anno_info['boxes']:
                 anno_info['boxes'][box_id] = []
-            xmin = int(box_container[0].findall('xmin')[0].text)
-            ymin = int(box_container[0].findall('ymin')[0].text)
-            xmax = int(box_container[0].findall('xmax')[0].text)
-            ymax = int(box_container[0].findall('ymax')[0].text)
+            xmin = int(box_container[0].findall('xmin')[0].text) - 1
+            ymin = int(box_container[0].findall('ymin')[0].text) - 1
+            xmax = int(box_container[0].findall('xmax')[0].text) - 1
+            ymax = int(box_container[0].findall('ymax')[0].text) - 1
             anno_info['boxes'][box_id].append([xmin, ymin, xmax, ymax])
         else:
             nobndbox = int(object_container.findall('nobndbox')[0].text)
