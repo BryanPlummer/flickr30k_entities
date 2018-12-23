@@ -93,24 +93,25 @@ def get_annotations(fn):
         anno_info[size_element.tag] = int(size_element.text)
 
     for object_container in root.findall('object'):
-        box_id = object_container.findall('name')[0].text
-        box_container = object_container.findall('bndbox')
-        if len(box_container) > 0:
-            if box_id not in anno_info['boxes']:
-                anno_info['boxes'][box_id] = []
-            xmin = int(box_container[0].findall('xmin')[0].text) - 1
-            ymin = int(box_container[0].findall('ymin')[0].text) - 1
-            xmax = int(box_container[0].findall('xmax')[0].text) - 1
-            ymax = int(box_container[0].findall('ymax')[0].text) - 1
-            anno_info['boxes'][box_id].append([xmin, ymin, xmax, ymax])
-        else:
-            nobndbox = int(object_container.findall('nobndbox')[0].text)
-            if nobndbox > 0:
-                anno_info['nobox'].append(box_id)
+        for names in object_container.findall('name'):
+            box_id = names.text
+            box_container = object_container.findall('bndbox')
+            if len(box_container) > 0:
+                if box_id not in anno_info['boxes']:
+                    anno_info['boxes'][box_id] = []
+                xmin = int(box_container[0].findall('xmin')[0].text) - 1
+                ymin = int(box_container[0].findall('ymin')[0].text) - 1
+                xmax = int(box_container[0].findall('xmax')[0].text) - 1
+                ymax = int(box_container[0].findall('ymax')[0].text) - 1
+                anno_info['boxes'][box_id].append([xmin, ymin, xmax, ymax])
+            else:
+                nobndbox = int(object_container.findall('nobndbox')[0].text)
+                if nobndbox > 0:
+                    anno_info['nobox'].append(box_id)
 
-            scene = int(object_container.findall('scene')[0].text)
-            if scene > 0:
-                anno_info['scene'].append(box_id)
+                scene = int(object_container.findall('scene')[0].text)
+                if scene > 0:
+                    anno_info['scene'].append(box_id)
 
     return anno_info
 
