@@ -33,7 +33,7 @@ This dataset contains 244k coreference chains and 276k manually annotated boundi
 
 To obtain the images for this dataset, please visit the [Flickr30K webpage](http://hockenmaier.cs.illinois.edu/DenotationGraph/) and fill out the form linked to at tbe bottom of the page.
 
-### Coreference Chains:
+#### Coreference Chains:
 
 Each image in the dataset has a txt file in the "Sentences" folder.  Each line of this file contains a caption with annotated phrases blocked off with brackets.  Each annotation has the following form:
 
